@@ -1,79 +1,93 @@
-# proof-ai-skills
-Claude Skills for Proof AI Accelerator by Innovato Consultancy
-# PROOF AI Skills
+# Founder-Market Fit Skill
 
-**Open-source Claude skills for pre-PMF AI-native founders.**
-
-Built by [Innovato Consultancy](https://innovatoconsultancy.com) as part of the [PROOF AI Accelerator](https://www.proofaiaccelerator.com) methodology.
-
-PROOF founders get access to 50+ of these skills across the full 10-week program. This repository contains the ones we're releasing publicly.
+**A Claude skill by [Innovato Consultancy](https://www.innovatoconsultancy.com) — part of the [PROOF AI Accelerator](https://proofaiaccelerator.com) skill library.**
 
 ---
 
-## What are Claude Skills?
+## What it does
 
-Claude Skills are installable instruction sets that extend Claude's behaviour for a specific, repeatable task. Once installed, Claude applies them automatically when the context calls for it — no prompting required.
+This skill reverse-engineers a person's strongest **AI-native SaaS go-to-market opportunity** from their LinkedIn profile and/or CV.
 
-Think of them as methodology encoded into your AI copilot.
+Given a professional background, it:
 
----
-
-## Available Skills
-
-### 🎙️ [Customer Interview Simulator](./customer-interview-simulator/)
-
-Simulate realistic customer discovery interviews to pressure-test whether a problem is real, acute, and worth building on — before writing a line of code.
-
-**What it does:**
-- Takes your problem statement + ICP definition
-- Generates 5 distinct customer personas scored on 6 key attributes (pain intensity, urgency, budget authority, problem awareness, tech adoption, workaround reliance)
-- Simulates 5 full discovery interviews (5–10 questions each) using strict Mom Test principles
-- Delivers a Problem Validation Signal Report with a scored verdict: proceed, reframe, or pivot
-
-**Why it matters:**
-Most discovery interviews are designed, unintentionally, to produce false confidence. This skill builds in structural skepticism — at least 2 of 5 personas are skeptics, pragmatists, or people who've already solved the problem. Because that's what reality looks like.
-
-→ [Read the full skill documentation](./customer-interview-simulator/SKILL.md)
+1. Runs a **brief discovery dialogue** (2 questions) to understand constraints and preferences
+2. Silently extracts **skills, experience signals, network capital, and unfair advantages**
+3. Web-searches **live market data** to ground insights in current trends and competitor funding
+4. Scores **5 GTM opportunity candidates** on Impact, Urgency, and Feasibility
+5. Delivers **full deep-dive analyses** on the Top 2, including:
+   - Ideal Customer Profile (ICP)
+   - Founder-to-investor Problem Statement
+   - 3-layer Value Proposition
+   - VC-grade Competitor Matrix (positioning, features, funding, moat, whitespace)
+   - Wedge-first Entry Point Recommendation
 
 ---
 
-## How to Install a Skill
+## When to use it
 
-1. Go to [claude.ai](https://claude.ai) → your profile icon → **Settings**
-2. Navigate to the **Skills** tab
-3. Click **Upload skill** and upload the `.skill` file
+- You have a LinkedIn profile or CV and want startup direction
+- You want to know what pain points your background uniquely qualifies you to solve
+- You're entering a new market and want to validate founder-market fit
+- Phrases like: *"what should I build?"*, *"what's my best GTM opportunity?"*, *"turn my expertise into a product"*, *"is my background fundable?"*
 
-Or clone this repo and follow the instructions in each skill's folder.
+---
 
-### Installing from source (for developers)
+## Installation
 
-Each skill folder contains a `SKILL.md` and a `references/` directory. You can use these directly with the Claude API or package them into a `.skill` file for the Claude.ai interface.
+1. Download `founder-market-fit.skill`
+2. In Claude.ai, go to **Settings → Skills**
+3. Click **Install from file** and select the `.skill` file
 
-```bash
-git clone https://github.com/MahmutOzdemir/proof-ai-skills.git
-cd proof-ai-skills
+---
+
+## Example inputs
+
+- Paste your LinkedIn **About + Experience** sections directly into chat
+- Upload your **CV as a PDF**
+- Or both — the skill handles mixed input gracefully
+
+---
+
+## Output format
+
+A structured memo covering:
+
+```
+Profile Analysis (internal)
+↓
+5 GTM Opportunity Candidates (scored table)
+↓
+Top 2 Deep Dives:
+  - ICP Table
+  - Problem Statement
+  - Value Proposition (3 layers)
+  - Competitor Matrix (VC-grade)
+  - Entry Point Recommendation
 ```
 
 ---
 
-## Contributing
+## Part of the PROOF AI Accelerator Skill Library
 
-Found a bug? Have an improvement? Pull requests are welcome.
+This skill is one of a growing collection of Claude skills built for pre-PMF AI-native founders, published open-source by Innovato Consultancy.
 
-If you've tested a skill on a real problem and have signal on what works or what falls short — open an issue. Real-world feedback is how these get better.
+Other skills in the library:
+- `icp-architect` — Define and stress-test your Ideal Customer Profile
+- `outreach-forge` — Generate cold outreach sequences from trigger events
+- `discovery-coach` — Pre-call prep and post-call debrief
+- `demo-playbook-builder` — Build discovery-anchored demo narratives
+- `objection-decoder` — Classify and respond to sales objections (ACAC framework)
+- `pipeline-pulse` — Weekly deal review and forecast
+- `frustration-archaeology` — Ideation from professional pain
+- `kano-roadmap` — Feature prioritisation using Kano model
+- `customer-interview-simulator` — Simulate discovery interviews for problem validation
 
----
-
-## About PROOF
-
-PROOF is a 10-week AI accelerator for technical founders who turn deep domain expertise into AI ventures. Zero equity upfront.
-
-We compress months of venture building into weeks using a sprint methodology supported by custom AI copilots — of which these skills are a part.
-
-→ [proofaiaccelerator.com](https://www.proofaiaccelerator.com)
+→ Full library: [github.com/MahmutOzdemir/proof-ai-skills](https://github.com/MahmutOzdemir/proof-ai-skills)
 
 ---
 
 ## License
 
-MIT © 2026 [Innovato Consultancy — PROOF AI Accelerator](https://www.proofaiaccelerator.com)
+MIT License — Copyright (c) 2025 Innovato Consultancy, Breskens, Netherlands.
+
+See [LICENSE](./LICENSE) for full terms.
